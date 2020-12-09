@@ -1,0 +1,145 @@
+.title-row {
+    background-color: #3f51b5;
+    color: white;
+    font-size: 18px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.categories-row {
+    box-shadow: 0px 2px 10px #888888;
+    height: 30px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: white;
+    width:100%;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.category-box {
+    
+}
+
+.button-tab {
+    min-width: 100px;
+    height:35px; 
+    width: 24.65vw; 
+    text-align: center; 
+    font-size:10px; 
+    font-weight: bolder;
+}
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+    border-bottom: 2px solid darkblue;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+ }
+ .nav a:hover {
+    border-bottom: 3px solid darkblue;
+  }
+  
+  .nav a:active, .nav a:focus {
+    border-bottom: 3px solid darkblue;
+  }
+  
+  .nav a:visited {
+      border-bottom: 3px solid darkblue;
+  }
+
+   .nav a:target {
+    border-bottom: 3px solid red;
+  }
+.product-search-container {
+    position: relative;
+}
+
+.clicked {
+    border-bottom: 1px solid violet;
+  }
+  
+
+.product-search-icon {
+    position: absolute;
+    top: 6px;
+    left: 28px;
+    font-size: 16px;
+    color: gray;
+}
+
+.product-search {
+    padding-left: 40px;
+    height: 30px;
+    font-size: 12px;
+}
+
+.product-search:focus {
+    border: 1.75px solid #3f51b5;
+    box-shadow: none;
+}
+
+.powered-by {
+    font-size: 11px;
+    text-align: center;
+}
+
+.footer-row {
+    background-color: #f5f5f5;
+    bottom: 0;
+    border-top: 1px solid gray;
+    font-size: large;
+    height: 40px;
+    position: sticky;
+}
+
+.checkout-button {
+    background-color: #40C25E;
+    border: transparent;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-stretch: condensed;
+    font-weight: bold;
+    margin-top: 2px;
+    padding: 5px 10px;
+}
+
+.checkout-button:focus {
+    outline: none;
+}
+
+.checkout-button:disabled {
+    background-color: #61cc7a;
+    cursor: not-allowed;
+    outline: none;
+}
+
+#categories-nav {
+    height: 20px;
+    padding: 0;
+}
+
+.nav-item {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bolder;
+    list-style: none;
+    flex-grow: 1;
+}
+
+.active-item {
+    border-bottom: 5px solid #3f51b5;
+}

@@ -1,0 +1,47 @@
+<div class="modal-header">
+    <h4 class="modal-title">My Order</h4>
+    <button class="modal-close-button" type="button" class="close" aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <fieldset class="border-top">
+        <legend class="w-auto text-center">
+            <h6>Order Details</h6>
+        </legend>
+    </fieldset>
+    <ng-container *ngFor="let item of filteredItems; let i=index">
+        <div class="checkout-item" *ngIf="item.quantity > 0">
+            <span class="fa fa-close text-danger" (click)="removeAll(i)"></span> &nbsp;&nbsp;
+            {{item.productName}}
+            <div class="checkout-item-actions-container">
+                <button class="modal-close-button" type="button">
+                    <span class="fa fa-plus-circle" (click)="addOne(i)"></span>
+                </button>
+                <p class="item-quantity-label">{{item.quantity}}</p>
+                <button class="modal-close-button" type="button">
+                    <span class="fa fa-minus-circle" (click)="removeOne(i)"></span>
+                </button>
+                <div class="subtotal-container">
+                    <span class="badge">{{item.price * item.quantity | number : '1.2-2'}} $</span>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <div class="total-payment-container">
+        <span class="text-bold">Total Payment</span>
+        <span class="total-payment-value pull-right">{{totalAmount}} $ </span>
+    </div>
+    <fieldset class="border-top">
+        <legend class="w-auto text-center">
+            <h6>&nbsp;&nbsp;Special Instructions&nbsp;&nbsp;</h6>
+        </legend>
+    </fieldset>
+    <textarea tabindex="0" rows="6" placeholder="Make general notes for the order if necessary" type="textarea"
+        class="notes-section" spellcheck="false" id= "comment" [(ngModel)] = "comment"></textarea>
+        <button class = "btn btn-success btn-lg btn-block" [disabled] = "!enableOrderButton" (click) = "placeOrder()" > ORDER NOW
+            <i class="fa fa-spinner fa-spin" *ngIf="loading"></i>
+        </button>
+        
+    </div>

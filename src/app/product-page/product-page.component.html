@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class = "fixed-top">
+    <div class="row title-row">
+      <div class="col-12">
+        <strong>Products</strong>
+      </div>
+    </div>
+    <div class="row fixed-top categories-row">
+      <div class="categories col-12 ">
+      <ng-container class = "category-box" *ngFor="let category of categories">
+         <span class = "nav-item "[class.active-item]="selectedCategory===this.getFormattedId(category.category)"
+         (click)="goToCategory(category.category)">{{category.category | uppercase}}</span>
+      </ng-container>
+    </div>
+    </div>
+  </div>
+    <div class="row" style = "padding-top: 100px;">
+      <div class="col-12 product-search-container">
+        <i class="fa fa-search product-search-icon"></i>
+        <input #searchText type="text" class="form-control product-search" placeholder="Product Search"
+          (change)="filterProducts(searchText.value)">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <ng-container  *ngFor="let category of categories">
+          <app-category [getFormattedId]="getFormattedId(category.category)" [category]="category.category" [items]="filterProductsByCategory(category.category)">
+          </app-category>
+        </ng-container>
+      </div>
+    </div>
+    <hr />
+    <div class="row footer-row fixed-bottom">
+      <div class="col-12">
+        <b>
+          <span class="fa fa-cart-plus " style = "font-size: 36px;"></span> &nbsp;
+          <span style = "font-size: 24px;">Total: {{totalAmount}} $</span>
+        </b>
+        <button class="checkout-button float-right" [disabled]="!enableCheckout" (click)="openCheckoutModal()">CHECK OUT >></button>
+      </div>
+    </div>
+  </div>

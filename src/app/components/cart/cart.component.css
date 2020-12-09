@@ -1,0 +1,74 @@
+app-cart .modal-title {
+    font-size: 12px !important;
+}
+
+.modal-header {
+    background-color: #26316d;
+    color: white;
+    height: 45px;
+    padding: 10px;
+}
+
+.modal-title {
+    font-size: 16px !important;
+}
+
+.close {
+    color: white;
+    font-weight: 100;
+}
+
+.close:focus {
+    outline: none;
+}
+
+.total-payment-container {
+    background-color: #eee;
+    height: 30px;
+    padding: 3px;
+    margin: 10px 0;
+}
+
+.checkout-item {
+    border-bottom: 1px solid lightgray;
+    font-size: 13px;
+    margin-bottom: 3px;
+    padding: 5px;
+}
+
+.checkout-item .fa-close {
+    cursor: pointer;
+}
+
+.checkout-item-actions-container {
+    display: inline-block;
+    font-size: 13px;
+    position: absolute;
+    right: 10px;
+}
+
+.checkout-item-actions-container button {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.item-quantity-label {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+}
+
+.subtotal-container {
+    display: inline-block;
+    margin-left: 50px;
+    text-align: center;
+    width: 30px;
+}
+
+.notes-section {
+    font-size: 12px;
+    height: 179px;
+    width: 100%;
+}
